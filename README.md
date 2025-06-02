@@ -21,6 +21,9 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Como rodar o projeto
+
+Para rodar o projeto é necessário executar o comando yarn, depois npx prisma migrate generate junto com npx prisma migrate dev e por ultimo yarn start:dev
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
