@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { UserRepository } from '@modules/user/shared/repositories/UserRepository';
-import { LoginController } from './controller/login.controller';
 import { LoginService } from './service/login.service';
-import { DecryptJweController } from '@modules/decrypt_jwe/controller/decryptjwe.controller';
-import { DecryptJWEService } from '@modules/decrypt_jwe/service/decryptjwe.service';
 import { IUserRepository } from '@modules/user/shared/repositories/abstract_class/IUserRepository';
+import { DecryptJWEService } from '@modules/decrypt_jwe/service/decryptjwe.service';
+import { DecryptJweController } from '@modules/decrypt_jwe/controller/decryptjwe.controller';
+import { LoginController } from './controller/login.controller';
+import { AuthService } from '@modules/auth/authService';
 
 @Module({
   imports: [],
@@ -12,6 +13,7 @@ import { IUserRepository } from '@modules/user/shared/repositories/abstract_clas
   providers: [
     LoginService,
     DecryptJWEService,
+    AuthService,
     {
       provide: IUserRepository,
       useClass: UserRepository,
